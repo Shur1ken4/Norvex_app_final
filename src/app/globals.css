@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Revolut palette (warmed toward near-black) + Norvex blue ── */
+  --bk: #191c1f;          /* Revolut Black — primary text */
+  --wh: #ffffff;          /* Pure White — surfaces */
+  --gy: #f4f4f4;          /* Cloud White — soft section fill */
+  --bd: #ebebf0;          /* Light-Tint — hairline borders/dividers */
+  --bd-strong: #c9c9cd;   /* Pebble — stronger borders */
+  --mt: #8d969e;          /* Slate Gray — muted/helper text */
+  --lt: #505a63;          /* Ash — secondary text */
+  --gn: #16a34a;
+  --rd: #dc2626;
+  --am: #ca8a04;
+  --bg: #FFFFFF;
+  --body2: #505a63;       /* Ash — body copy */
+  --muted-fill: #c9c9cd;  /* Pebble */
+
+  --tint-gn-bg: #f0fdf4;
+  --tint-gn-bd: #bbf7d0;
+  --tint-rd-bg: #fef2f2;
+  --tint-rd-bd: #fecaca;
+  --tint-am-bg: #fffbeb;
+  --tint-am-bd: #fef3c7;
+
+  /* Blue brand tints */
+  --tint-blue-bg: #EFF6FF;
+  --tint-blue-bd: #BFDBFE;
+
+  /* ── Fonts — Revolut: geometric display + Inter body ── */
+  /* Aeonik Pro is licensed; Space Grotesk is the closest free geometric grotesque. */
+  --font-display: 'Aeonik Pro', 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Revolut type scale (tight negative tracking is the signature) ── */
+  --text-display-xl: 89px;  --leading-display-xl: 1;     --tracking-display-xl: -2.05px;
+  --text-display: 53px;     --leading-display: 1.04;     --tracking-display: -1.22px;
+  --text-h-lg: 40px;        --leading-h-lg: 1.1;         --tracking-h-lg: -1px;
+  --text-h: 32px;           --leading-h: 1.12;           --tracking-h: -0.8px;
+  --text-h-sm: 24px;        --leading-h-sm: 1.17;        --tracking-h-sm: -0.5px;
+
+  /* ── Radii — Revolut: cards 20, inputs 12, buttons pill ── */
+  --r-sm: 8px;
+  --r-md: 12px;       /* inputs */
+  --r-lg: 20px;       /* cards */
+  --r-xl: 22.5px;     /* UI mockups */
+  --r-pill: 9999px;   /* buttons */
+
+  /* Brand accent — Norvex premium blue (kept + leaned into) */
+  --nx-1: #2563EB;
+  --nx-2: #60A5FA;
+  --nx-on: #ffffff;
+  --nx-grad: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);
+  --nx-soft: #EFF6FF;     /* blue wash for tinted surfaces */
+
+  /* Hero glow — blue */
+  --hero-glow: radial-gradient(60% 50% at 20% 0%, rgba(37,99,235,0.14), transparent 70%);
+
+  /* ── Elevation — Revolut is flat; shadows kept minimal/hairline ── */
+  --shadow-sm: 0 0 0 1px rgba(25,28,31,0.04);
+  --shadow-md: 0 1px 2px rgba(25,28,31,0.06);
+  --shadow-lg: 0 8px 28px rgba(25,28,31,0.08);
+
+  /* ── Section rhythm — Revolut generous spacing ── */
+  --pad-section: 80px;
+  --pad-lg: 96px;
+  --section-gap: 96px;
+  --page-max: 1200px;
+
+  /* Page canvas — the background behind the app container */
+  --page-bg: #f4f4f4;
+
+  /* Subtle dot-grid pattern for hero backgrounds */
+  --dot-grid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23c9c9cd' fill-opacity='0.5'/%3E%3C/svg%3E");
+
+  /* Pro "blueprint depth" — faint grid lines layered behind the app shell */
+  --pro-grid: rgba(37,99,235,0.045);
+  --pro-grid-gutter: rgba(25,28,31,0.05);
+}
+
+[data-theme="dark"] {
+  --bk: #F1F5F9;
+  --wh: #0F172A;
+  --gy: #1E293B;
+  --bd: #334155;
+  --bd-strong: #475569;
+  --mt: #64748B;
+  --lt: #CBD5E1;
+  --gn: #34d27f;
+  --rd: #f87171;
+  --am: #eab308;
+  --bg: #080D1A;
+  --body2: #94A3B8;
+  --muted-fill: #334155;
+  --nx-soft: #16233b;
+
+  --tint-gn-bg: #0c1f15;
+  --tint-gn-bd: #14532d;
+  --tint-rd-bg: #2a1416;
+  --tint-rd-bd: #7f1d1d;
+  --tint-am-bg: #241c08;
+  --tint-am-bd: #713f12;
+  --tint-blue-bg: #1e3a5f;
+  --tint-blue-bd: #1d4ed8;
+
+  /* Blue brand in dark — slightly brighter */
+  --nx-1: #3B82F6;
+  --nx-2: #93C5FD;
+  --nx-grad: linear-gradient(135deg, #3B82F6 0%, #93C5FD 100%);
+  --hero-glow: radial-gradient(60% 50% at 20% 0%, rgba(59,130,246,0.24), transparent 70%);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.55);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.65);
+
+  /* Page canvas — dark in dark mode */
+  --page-bg: #060b14;
+
+  /* Pro grid leans on a faint light line in dark mode */
+  --pro-grid: rgba(147,197,253,0.06);
+  --pro-grid-gutter: rgba(147,197,253,0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; background: var(--page-bg); color: var(--bk); font-family: var(--font-body); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+h1, h2, h3, h4, .nx-display { font-family: var(--font-display); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes nxblink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes nxpulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.45; } }
+@keyframes nxfill { from { width: 0%; } to { width: 100%; } }
+textarea:focus, input:focus { border-color: var(--nx-1) !important; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+::selection { background: #DBEAFE; color: #1e40af; }
+input[type=range] { height: 6px; }
+.nx-partner:hover { transform: translateY(-2px); border-color: var(--nx-1) !important; box-shadow: 0 6px 18px rgba(37,99,235,0.12); }
+.nx-partner:hover span { color: var(--nx-1); }
+
+/* ── App shell elevation (moved off inline so Pro can deepen it) ── */
+.nx-shell {
+  position: relative;
+  isolation: isolate;
+  max-width: 1240px;
+  margin: 20px auto;
+  border: 1px solid var(--bd);
+  box-shadow: 0 2px 4px rgba(15,23,42,0.04), 0 8px 40px rgba(15,23,42,0.10);
+  transition: box-shadow .55s cubic-bezier(.16,1,.3,1), background-color .45s ease;
+}
+
+/* ── Pro mode "blueprint depth" skin ── applied app-wide via [data-mode="pro"].
+   Lite mode is untouched. Premium through restraint: a faint blueprint grid
+   behind the shell, deeper elevation (cards/buttons inherit via --shadow-*),
+   and a subtly grid-textured page gutter. */
+[data-mode="pro"] {
+  --shadow-sm: 0 0 0 1px rgba(25,28,31,0.05);
+  --shadow-md: 0 2px 6px rgba(25,28,31,0.08), 0 10px 28px rgba(25,28,31,0.07);
+  --shadow-lg: 0 14px 44px rgba(25,28,31,0.14);
+}
+[data-theme="dark"][data-mode="pro"] {
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.35);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.62);
+  --shadow-lg: 0 22px 64px rgba(0,0,0,0.72);
+}
+
+/* The blueprint grid lives on pseudo-elements so it can fade + gently settle
+   on every mode switch (background-image can't be transitioned directly). */
+.nx-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--pro-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pro-grid) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-position: -1px -1px;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity .55s ease, transform .8s cubic-bezier(.16,1,.3,1);
+}
+[data-mode="pro"] .nx-shell::before { opacity: 1; transform: scale(1); }
+[data-mode="pro"] .nx-shell {
+  box-shadow: 0 2px 8px rgba(15,23,42,0.07), 0 18px 56px rgba(15,23,42,0.16);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--pro-grid-gutter) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pro-grid-gutter) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+[data-mode="pro"] body::before { opacity: 1; }
+
+@media (max-width: 900px) {
+  .nx-hero { grid-template-columns: 1fr !important; }
+  .nx-howgrid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 600px) {
+  .nx-howgrid { grid-template-columns: 1fr !important; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}

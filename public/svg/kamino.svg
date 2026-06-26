@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="kamino_g" x1="10" y1="10" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6FE9CE"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="11" width="6.2" height="26" rx="1.6" fill="url(#kamino_g)"/>
+  <path d="M19.5 24 L31.5 11.5 L36.5 16 L27.5 24 L36.5 32 L31.5 36.5 Z" fill="url(#kamino_g)"/>
+</svg>
